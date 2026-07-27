@@ -4,7 +4,7 @@ Companion project for the "Loyalty B4 Love RP" FiveM server: a mobile PWA for pl
 
 ## Repo layout
 
-- `lbl_mobile_app.zip` — source for the player-facing PWA (index.html/app.js/style.css/sw.js/manifest.json/icon.svg). It's currently zipped rather than committed as plain files, which makes it hard to diff/edit directly — consider unzipping it into `app/` and committing the real files so changes go through normal git diffs. Ask before doing this, since it restructures existing tracked content.
+- `app/` — source for the player-facing PWA (index.html/app.js/style.css/sw.js/manifest.json/icon.svg).
 - `resources/` — FiveM Lua resources (server scripts). New resources go here, one folder per resource.
 - `.claude/skills/` — skills for this project: `fivem-resource` (scaffold a new resource) and `fivem-server-admin` (server.cfg/database/RCON help).
 

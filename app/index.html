@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Loyalty B4 Love RP</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="theme-color" content="#7b2cff" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="LBL RP" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <button class="icon-btn">☰</button>
+      <div class="bell">🔔<span>3</span></div>
+      <h1>LOYALTY<br><b>B4 LOVE</b><br><small>RP</small></h1>
+      <p class="welcome">WELCOME TO</p>
+      <h2>LOYALTY <span>B4 LOVE</span> RP</h2>
+      <p class="tagline">Loyalty over everything. Love comes later.</p>
+    </header>
+
+    <main>
+      <section class="status-card">
+        <div><span class="dot"></span> SERVER STATUS</div>
+        <strong>ONLINE</strong>
+        <div class="status-grid">
+          <p><small>Players Online</small><br>128 / 2048</p>
+          <p><small>Server IP</small><br>connect lbl-rp.com</p>
+        </div>
+      </section>
+
+      <section class="grid-menu">
+        <button onclick="showPage('rules')">📖<span>Rules</span></button>
+        <button onclick="showPage('staff')">👥<span>Staff</span></button>
+        <button onclick="showPage('news')">📣<span>Announcements</span></button>
+        <button onclick="showPage('apps')">📋<span>Applications</span></button>
+        <button onclick="openLink('#')">💜<span>Donate</span></button>
+        <button onclick="openLink('https://discord.gg/')">🎮<span>Discord</span></button>
+      </section>
+
+      <section class="discord-card">
+        <div>
+          <h3>Join Our Discord</h3>
+          <p>Stay connected with the community.</p>
+        </div>
+        <button onclick="openLink('https://discord.gg/')">Join Now</button>
+      </section>
+    </main>
+
+    <nav class="bottom-nav">
+      <button onclick="showPage('home')">🏠<span>Home</span></button>
+      <button onclick="showPage('news')">📰<span>News</span></button>
+      <button onclick="showPage('apps')">🗂️<span>Apps</span></button>
+      <button onclick="showPage('profile')">👤<span>Profile</span></button>
+    </nav>
+  </div>
+
+  <section id="page" class="page hidden">
+    <button class="back" onclick="showPage('home')">‹ Back</button>
+    <div id="pageContent"></div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

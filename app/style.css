@@ -1,0 +1,88 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: radial-gradient(circle at top, #32105e 0%, #090912 45%, #050508 100%);
+  color: white;
+}
+.app-shell, .page {
+  max-width: 430px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: env(safe-area-inset-top) 18px calc(82px + env(safe-area-inset-bottom));
+  background: linear-gradient(180deg, rgba(13,13,22,.96), rgba(7,7,12,.98));
+}
+.hero {
+  position: relative;
+  padding: 22px 0 16px;
+  text-align: center;
+  overflow: hidden;
+}
+.hero:before {
+  content: "";
+  position: absolute; inset: 30px 0 auto; height: 190px;
+  background: radial-gradient(circle, rgba(123,44,255,.45), transparent 65%);
+  filter: blur(8px);
+}
+.icon-btn, .bell, .back { position: relative; z-index: 2; }
+.icon-btn {
+  position: absolute; left: 0; top: 22px; border: 0; background: transparent; color: white; font-size: 28px;
+}
+.bell { position: absolute; right: 0; top: 24px; font-size: 22px; }
+.bell span { background: #8d35ff; border-radius: 999px; padding: 2px 7px; font-size: 12px; position: absolute; top: -10px; right: -8px; }
+h1 {
+  position: relative; z-index: 1; margin: 30px 0 20px; line-height: .86;
+  font-size: 54px; letter-spacing: -2px; text-shadow: 0 0 20px #8b38ff;
+}
+h1 b { color: #9b49ff; font-style: italic; }
+h1 small { font-size: 30px; }
+.welcome { color: #a65cff; font-weight: bold; margin: 0; }
+h2 { margin: 8px 0 4px; font-size: 25px; }
+h2 span { color: #9b49ff; }
+.tagline { color: #aaa; text-transform: uppercase; font-size: 12px; }
+.status-card, .discord-card, .content-card {
+  background: rgba(20,20,33,.92);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 12px 35px rgba(0,0,0,.35);
+}
+.status-card { margin-top: 8px; }
+.status-card > div:first-child { display: inline-block; font-weight: 800; }
+.status-card > strong { float: right; color: #20e26f; }
+.dot { display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #20e26f; margin-right: 8px; }
+.status-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; clear: both; }
+small { color: #999; }
+.grid-menu { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 18px 0; }
+.grid-menu button {
+  height: 92px; border: 1px solid rgba(255,255,255,.08); border-radius: 14px;
+  background: rgba(18,18,30,.9); color: white; font-size: 28px; font-weight: bold;
+}
+.grid-menu span { display: block; font-size: 11px; margin-top: 10px; text-transform: uppercase; }
+.discord-card { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.discord-card h3 { margin: 0 0 4px; text-transform: uppercase; }
+.discord-card p { margin: 0; color: #aaa; font-size: 13px; }
+button { cursor: pointer; }
+.discord-card button, .primary-btn {
+  border: 0; border-radius: 12px; color: white; font-weight: 800; padding: 12px 18px;
+  background: linear-gradient(135deg, #7b2cff, #a84dff);
+}
+.bottom-nav {
+  position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
+  width: min(430px, 100vw); display: grid; grid-template-columns: repeat(4,1fr);
+  background: rgba(8,8,14,.96); border-top: 1px solid rgba(255,255,255,.08);
+  padding: 10px 0 calc(10px + env(safe-area-inset-bottom));
+}
+.bottom-nav button { background: transparent; border: 0; color: #aaa; font-size: 20px; }
+.bottom-nav span { display: block; font-size: 10px; margin-top: 4px; text-transform: uppercase; }
+.hidden { display: none; }
+.page { position: fixed; inset: 0; overflow: auto; }
+.back { margin: 20px 0; border: 0; background: transparent; color: white; font-size: 22px; }
+.page h2 { text-align: center; text-transform: uppercase; margin-bottom: 22px; }
+.list { display: grid; gap: 12px; }
+.content-card h3 { margin: 0 0 6px; }
+.content-card p { color: #cfcfd6; margin: 0; line-height: 1.4; }
+.number { color: #a84dff; font-size: 32px; font-weight: 900; margin-right: 14px; }
+.row { display: flex; align-items: center; }
+.badge { color: #20e26f; font-size: 12px; font-weight: 800; }

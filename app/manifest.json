@@ -1,0 +1,12 @@
+{
+  "name": "Loyalty B4 Love RP",
+  "short_name": "LBL RP",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#050508",
+  "theme_color": "#7b2cff",
+  "icons": [
+    { "src": "icon.svg", "sizes": "192x192", "type": "image/svg+xml" },
+    { "src": "icon.svg", "sizes": "512x512", "type": "image/svg+xml" }
+  ]
+}
