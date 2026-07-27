@@ -1,0 +1,44 @@
+{
+  "name": "lbl-rp-desktop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Loyalty B4 Love RP desktop app",
+  "main": "desktop/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder",
+    "dist:linux": "electron-builder --linux",
+    "dist:win": "electron-builder --win",
+    "dist:mac": "electron-builder --mac"
+  },
+  "devDependencies": {
+    "electron": "^32.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "com.lblrp.app",
+    "productName": "Loyalty B4 Love RP",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "desktop/**",
+      "app/**",
+      "!**/*.map"
+    ],
+    "mac": {
+      "icon": "desktop/build/icon.icns",
+      "target": "dmg",
+      "category": "public.app-category.entertainment"
+    },
+    "win": {
+      "icon": "desktop/build/icon.ico",
+      "target": "nsis"
+    },
+    "linux": {
+      "icon": "desktop/build/icon.png",
+      "target": "AppImage",
+      "category": "Game"
+    }
+  }
+}

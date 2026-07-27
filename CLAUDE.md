@@ -5,6 +5,8 @@ Companion project for the "Loyalty B4 Love RP" FiveM server: a mobile PWA for pl
 ## Repo layout
 
 - `app/` — source for the player-facing PWA (index.html/app.js/style.css/sw.js/manifest.json/icon.svg).
+- `desktop/` — Electron wrapper (`main.js` + app icons) that loads `app/index.html` in a native window, so the same app can also run as Windows/Mac/Linux desktop software. Root `package.json` drives it: `npm start` runs it in dev, `npm run dist:<linux|win|mac>` builds an installer for that platform into `release/` (electron-builder can only target the OS it runs on, so cross-platform installers need the GitHub Actions workflow below or building on each OS directly).
+- `.github/workflows/desktop-build.yml` — CI matrix that builds Linux/Windows/Mac installers on their respective runners and uploads them as workflow artifacts. Trigger manually (Actions tab → Run workflow) or by pushing a `desktop-v*` tag.
 - `resources/` — FiveM Lua resources (server scripts). New resources go here, one folder per resource.
 - `.claude/skills/` — skills for this project: `fivem-resource` (scaffold a new resource) and `fivem-server-admin` (server.cfg/database/RCON help).
 
